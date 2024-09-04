@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>PasarKode</title>
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
+        <div class="text-xl font-bold">PasarKode</div>
+        <div class="flex-grow max-w-2xl mx-4">
+            <div class="relative">
+                <input type="text" placeholder="Cari kode, template, ai" class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+        </div>
+        <button class="px-6 py-2 text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors">Sign up</button>
+    </nav>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white p-4 h-screen">
+            <h2 class="font-semibold mb-4">Explore Pasar</h2>
+            <ul class="space-y-2">
+                <li><a href="#" class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>Script & Code</a></li>
+                <li><a href="#" class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>App Template</a></li>
+                <li><a href="#" class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>Web Themes</a></li>
+                <li><a href="#" class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>Data Analysis</a></li>
+                <li><a href="#" class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>Database</a></li>
+            </ul>
+            <div class="mt-8">
+                <h3 class="font-semibold mb-2">Quick Links</h3>
+                <ul class="space-y-1 text-sm">
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">About Us</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">How It Works</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Contacts</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Refund Policy</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <!-- Hero Section -->
+            <div class="bg-indigo-900 text-white rounded-lg p-8 mb-8">
+                <h1 class="text-4xl font-bold mb-4">Beli Kode, Jual Kode, Kembangkan Bersama</h1>
+                <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                <div class="space-x-4">
+                    <button class="px-6 py-2 bg-transparent border border-white rounded-full hover:bg-white hover:text-indigo-900 transition-colors">Beli Kode</button>
+                    <button class="px-6 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors">Jual Kode →</button>
+                </div>
+            </div>
+
+            <!-- Featured Items -->
+             <div class="flex space-x-4 mb-6">
+                <h2 class="text-2xl font-semibold">Featured Items</h2>
+                <button class="px-4 py-2 bg-white border-2 border-gray-200 hover:border-blue-700 rounded-full text-sm">AI Chatbot</button>
+                <button class="px-4 py-2 bg-white border-2 border-gray-200 hover:border-blue-700 rounded-full text-sm">Data Analysis</button>
+                <button class="px-4 py-2 bg-white border-2 border-gray-200 hover:border-blue-700 rounded-full text-sm">Responsive Website</buspan>
+             </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Featured Item Cards -->
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customer Chat" class="w-full h-40 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Customer Chatbot</h3>
+                        <p class="text-lg text-blue-600 font-bold">Rp250rb</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Python Data Vi..." class="w-full h-40 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Python Data Visualization</h3>
+                        <p class="text-lg text-blue-600 font-bold">Rp100rb</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Minimalist Land..." class="w-full h-40 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Minimalist Landing Page</h3>
+                        <p class="text-lg text-blue-600 font-bold">Rp110rb</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Minimalist Land..." class="w-full h-40 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Minimalist Landing Page</h3>
+                        <p class="text-lg text-blue-600 font-bold">Rp110rb</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Minimalist Land..." class="w-full h-40 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Minimalist Landing Page</h3>
+                        <p class="text-lg text-blue-600 font-bold">Rp110rb</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Minimalist Land..." class="w-full h-40 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Minimalist Landing Page</h3>
+                        <p class="text-lg text-blue-600 font-bold">Rp110rb</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
