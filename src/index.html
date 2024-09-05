@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-100">
     <!-- Navbar -->
-    <nav class="bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
+    <nav id="navbar" class="bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
         <div class="flex items-center">
             <button id="mobile-menu-button" class="mr-2 md:hidden">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -27,12 +27,13 @@
         </div>
         <button class="px-6 py-2 text-white font-bold bg-blue-600 rounded-full hover:bg-blue-700 active:bg-blue-800 transition-colors">Sign up</button>
     </nav>
+    <div id="navbar-spacer" class="h-16"></div>
     <div class="flex flex-col md:flex-row">
         <!-- Sidebar (hidden on mobile by default) -->
-        <aside id="sidebar" class="hidden md:block md:w-64 bg-white p-4 w-full h-screen fixed md:sticky top-0 z-10 overflow-y-auto z-10">
-            <div class="flex justify-between items-center mb-4 md:hidden">
+        <aside id="sidebar" class="hidden md:block md:w-64 bg-white p-4 w-full h-screen md:sticky top-16 z-10 overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
                 <h2 class="font-semibold">Explore Pasar</h2>
-                <button id="close-sidebar" class="text-gray-500 hover:text-gray-700">
+                <button id="close-sidebar" class="lg:hidden text-gray-500 hover:text-gray-700">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -109,42 +110,42 @@
                     <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customer Chat" class="w-full h-40 object-cover" />
                     <div class="p-4">
                         <h3 class="font-semibold">Customer Chatbot</h3>
-                        <p class="text-lg text-blue-600 font-bold">Rp250rb</p>
+                        <p class="text-lg text-blue-600 font-bold">Rp250.000</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg">
                     <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Python Data Vi..." class="w-full h-40 object-cover" />
                     <div class="p-4">
                         <h3 class="font-semibold">Python Data Visualization</h3>
-                        <p class="text-lg text-blue-600 font-bold">Rp100rb</p>
+                        <p class="text-lg text-blue-600 font-bold">Rp100.000</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg">
                     <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Minimalist Land..." class="w-full h-40 object-cover" />
                     <div class="p-4">
                         <h3 class="font-semibold">Minimalist Landing Page</h3>
-                        <p class="text-lg text-blue-600 font-bold">Rp110rb</p>
+                        <p class="text-lg text-blue-600 font-bold">Rp110.000</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg">
                     <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customer Chat" class="w-full h-40 object-cover" />
                     <div class="p-4">
                         <h3 class="font-semibold">Customer Chatbot</h3>
-                        <p class="text-lg text-blue-600 font-bold">Rp250rb</p>
+                        <p class="text-lg text-blue-600 font-bold">Rp250.000</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg">
                     <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customer Chat" class="w-full h-40 object-cover" />
                     <div class="p-4">
                         <h3 class="font-semibold">Customer Chatbot</h3>
-                        <p class="text-lg text-blue-600 font-bold">Rp250rb</p>
+                        <p class="text-lg text-blue-600 font-bold">Rp250.000</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg">
                     <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customer Chat" class="w-full h-40 object-cover" />
                     <div class="p-4">
                         <h3 class="font-semibold">Customer Chatbot</h3>
-                        <p class="text-lg text-blue-600 font-bold">Rp250rb</p>
+                        <p class="text-lg text-blue-600 font-bold">Rp250.000</p>
                     </div>
                 </div>
             </div>
