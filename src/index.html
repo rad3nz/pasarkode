@@ -9,8 +9,15 @@
 <body class="bg-gray-100">
     <!-- Navbar -->
     <nav class="bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
-        <div class="text-xl font-bold">PasarKode</div>
-        <div class="flex-grow max-w-2xl mx-4">
+        <div class="flex items-center">
+            <button id="mobile-menu-button" class="mr-2 md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div class="text-xl font-bold">PasarKode</div>
+        </div>
+        <div class="hidden md:block flex-grow max-w-2xl mx-4">
             <div class="relative">
                 <input type="text" placeholder="Cari kode, template, ai" class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -20,17 +27,33 @@
         </div>
         <button class="px-6 py-2 text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors">Sign up</button>
     </nav>
-
-    <div class="flex">
-        <!-- Sidebar -->
-        <aside class="w-64 bg-white p-4 h-screen">
-            <h2 class="font-semibold mb-4">Explore Pasar</h2>
+    <div class="flex flex-col md:flex-row">
+        <!-- Sidebar (hidden on mobile by default) -->
+        <aside id="sidebar" class="hidden md:block md:w-64 bg-white p-4 w-full h-screen fixed md:sticky top-0 z-10 overflow-y-auto z-10">
+            <div class="flex justify-between items-center mb-4 md:hidden">
+                <h2 class="font-semibold">Explore Pasar</h2>
+                <button id="close-sidebar" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
             <ul class="space-y-2">
-                <li><a href="#" class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>Script & Code</a></li>
-                <li><a href="#" class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>App Template</a></li>
-                <li><a href="#" class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>Web Themes</a></li>
-                <li><a href="#" class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>Data Analysis</a></li>
-                <li><a href="#" class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>Database</a></li>
+                <li><a href="#" class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                  </svg>Script & Code</a></li>
+                <li><a href="#" class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                  </svg>App Template</a></li>
+                <li><a href="#" class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                  </svg>Web Themes</a></li>
+                <li><a href="#" class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                  </svg>Data Analysis</a></li>
+                <li><a href="#" class="flex items-center text-sm md:text-base"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                  </svg>Database</a></li>
             </ul>
             <div class="mt-8">
                 <h3 class="font-semibold mb-2">Quick Links</h3>
@@ -45,25 +68,42 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 p-8">
+        <main class="flex-1 p-4 md:p-8">
+            <!-- Mobile Search (visible only on mobile) -->
+            <div class="mb-4 md:hidden">
+                <div class="relative">
+                    <input type="text" placeholder="Cari kode, template, ai" class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+            </div>
+
             <!-- Hero Section -->
-            <div class="bg-indigo-900 text-white rounded-lg p-8 mb-8">
-                <h1 class="text-4xl font-bold mb-4">Beli Kode, Jual Kode, Kembangkan Bersama</h1>
-                <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                <div class="space-x-4">
-                    <button class="px-6 py-2 bg-transparent border border-white rounded-full hover:bg-white hover:text-indigo-900 transition-colors">Beli Kode</button>
-                    <button class="px-6 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors">Jual Kode →</button>
+            <div class="bg-indigo-900 text-white rounded-lg p-6 md:p-8 mb-8">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Beli Kode, Jual Kode, Kembangkan Bersama</h1>
+                <p class="text-sm sm:text-base mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+                    <button class="w-full sm:w-auto px-6 py-2 bg-transparent border border-white rounded-full hover:bg-white hover:text-indigo-900 transition-colors text-sm sm:text-base">Beli Kode</button>
+                    <button class="w-full flex sm:w-auto px-6 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors text-sm sm:text-base items-center justify-center">
+                        Jual Kode
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 ml-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </button>
                 </div>
             </div>
 
             <!-- Featured Items -->
-             <div class="flex space-x-4 mb-6">
-                <h2 class="text-2xl font-semibold">Featured Items</h2>
-                <button class="px-4 py-2 bg-white border-2 border-gray-200 hover:border-blue-700 rounded-full text-sm">AI Chatbot</button>
-                <button class="px-4 py-2 bg-white border-2 border-gray-200 hover:border-blue-700 rounded-full text-sm">Data Analysis</button>
-                <button class="px-4 py-2 bg-white border-2 border-gray-200 hover:border-blue-700 rounded-full text-sm">Responsive Website</buspan>
-             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="flex flex-wrap flex-col md:flex-row gap-2 mb-6">
+                <h2 class="text-xl sm:text-2xl font-semibold">Featured Items</h2>
+                <div class="flex flex-wrap flex row gap-1">
+                    <button class="px-3 py-1 sm:px-4 sm:py-2 bg-white border-2 border-gray-200 hover:border-blue-700 rounded-full text-xs sm:text-sm">AI Chatbot</bspan>
+                        <button class="px-3 py-1 sm:px-4 sm:py-2 bg-white border-2 border-gray-200 hover:border-blue-700 rounded-full text-xs sm:text-sm">Data Analysis</buttospan>
+                        <button class="px-3 py-1 sm:px-4 sm:py-2 bg-white border-2 border-gray-200 hover:border-blue-700 rounded-full text-xs sm:text-sm">Responsive Website</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 <!-- Featured Item Cards -->
                 <div class="bg-white rounded-lg overflow-hidden shadow">
                     <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customer Chat" class="w-full h-40 object-cover" />
@@ -87,28 +127,29 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-lg overflow-hidden shadow">
-                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Minimalist Land..." class="w-full h-40 object-cover" />
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customer Chat" class="w-full h-40 object-cover" />
                     <div class="p-4">
-                        <h3 class="font-semibold">Minimalist Landing Page</h3>
-                        <p class="text-lg text-blue-600 font-bold">Rp110rb</p>
+                        <h3 class="font-semibold">Customer Chatbot</h3>
+                        <p class="text-lg text-blue-600 font-bold">Rp250rb</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg overflow-hidden shadow">
-                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Minimalist Land..." class="w-full h-40 object-cover" />
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customer Chat" class="w-full h-40 object-cover" />
                     <div class="p-4">
-                        <h3 class="font-semibold">Minimalist Landing Page</h3>
-                        <p class="text-lg text-blue-600 font-bold">Rp110rb</p>
+                        <h3 class="font-semibold">Customer Chatbot</h3>
+                        <p class="text-lg text-blue-600 font-bold">Rp250rb</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg overflow-hidden shadow">
-                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Minimalist Land..." class="w-full h-40 object-cover" />
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customer Chat" class="w-full h-40 object-cover" />
                     <div class="p-4">
-                        <h3 class="font-semibold">Minimalist Landing Page</h3>
-                        <p class="text-lg text-blue-600 font-bold">Rp110rb</p>
+                        <h3 class="font-semibold">Customer Chatbot</h3>
+                        <p class="text-lg text-blue-600 font-bold">Rp250rb</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
 </body>
+<script src="script.js"></script>
 </html>
